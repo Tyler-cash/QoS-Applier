@@ -717,6 +717,8 @@ def speedtest():
     if not args.simple:
         print_('Testing download speed', end='')
     dlspeed = downloadSpeed(urls, args.simple)
+    speeds = []
+    speeds.append((dlspeed / 1000 / 1000) * args.units[1])
     if not args.simple:
         print_()
     print_('Download: %0.2f M%s/s' %
@@ -730,6 +732,8 @@ def speedtest():
     if not args.simple:
         print_('Testing upload speed', end='')
     ulspeed = uploadSpeed(best['url'], sizes, args.simple)
+    speeds.append((ulspeed / 1000 / 1000) * args.units[1])
+    return speeds
     if not args.simple:
         print_()
     print_('Upload: %0.2f M%s/s' %
@@ -785,6 +789,7 @@ def speedtest():
                (scheme, resultid[0]))
 
 
+# noinspection PyUnboundLocalVariable
 def main():
     try:
         speedtest()
