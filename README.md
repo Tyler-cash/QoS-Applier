@@ -1,5 +1,5 @@
 # QoS-Applier
-This script updates the QoS settings on a DD-WRT router. The download and upload speeds are measured by using the speedtest_cli library.
+This script updates the QoS settings on a DD-WRT router. The download and upload speeds are measured using the speedtest_cli library.
 
 # Reason for script
 I use QoS to ensure my games don't lag and to prioritize video streaming over general webpage traffic. The problem is my download speed
