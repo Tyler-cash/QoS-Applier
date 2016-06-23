@@ -1,4 +1,4 @@
-# QoS-Applier
+# QoS Activator for DDWRT
 This script updates the QoS settings on a DD-WRT router. The download and upload speeds are measured using the speedtest_cli library.
 
 # Reason for script
